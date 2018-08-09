@@ -6,7 +6,7 @@ CONFIGFOLDER='/root/.Phore'
 COIN_DAEMON='phored'
 COIN_CLI='phore-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://www.dropbox.com/s/b2tkn7d1p0h6ngo/bin.zip'
+COIN_TGZ='https://github.com/phoreproject/Phore/releases/download/v1.3.3.1/phore-1.3.3.1-x86_64-linux-gnu.tar.gz'
 COIN_NAME='Phore'
 COIN_PORT=11771
 RPC_PORT=11770
@@ -27,6 +27,8 @@ function download_node() {
   unzip -j $COIN_DAEMON.zip 
   compile_error
   rm $COIN_DAEMON.zip
+  cd phore-1.3.3
+  cd bin
   chmod +x *
   cp $COIN_DAEMON $COIN_PATH
   cp $COIN_CLI $COIN_PATH
