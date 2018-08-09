@@ -90,8 +90,6 @@ rpcallowip=127.0.0.1
 listen=1
 server=1
 daemon=1
-logtimestamps=1
-maxconnections=256
 port=$COIN_PORT
 EOF
 }
@@ -125,6 +123,8 @@ bind=$NODEIP
 masternode=1
 masternodeaddr=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
+logtimestamps=1
+maxconnections=256
 EOF
 }
  
