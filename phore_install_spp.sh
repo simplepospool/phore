@@ -27,8 +27,6 @@ function download_node() {
   unzip -j $COIN_DAEMON.zip >/dev/null 2>&1
   compile_error
   rm $COIN_DAEMON.zip
-  cd phore-1.3.3
-  cd bin
   chmod +x *
   cp $COIN_DAEMON $COIN_PATH
   cp $COIN_CLI $COIN_PATH
