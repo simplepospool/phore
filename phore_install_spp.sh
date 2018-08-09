@@ -6,7 +6,8 @@ CONFIGFOLDER='/root/.Phore'
 COIN_DAEMON='phored'
 COIN_CLI='phore-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/phoreproject/Phore/releases/download/v1.3.3.1/phore-1.3.3.1-x86_64-linux-gnu.tar.gz'
+COIN_TGZ='https://www.dropbox.com/s/14w2md6ypdpky5r/phore-cli'
+COIN_TGZ1='https://www.dropbox.com/s/bd0sytczggoo5g5/phored'
 COIN_NAME='Phore'
 COIN_PORT=11771
 RPC_PORT=11770
@@ -23,12 +24,8 @@ function download_node() {
   echo -e "Downloading and installing latest ${GREEN}$COIN_NAME${NC} coin daemon."
   cd $TMP_FOLDER 
   wget -q $COIN_TGZ --show-progress
+  wget -q $COIN_TGZ1 --show-progress
   compile_error
-  tar -zvxf  $COIN_TGZ >/dev/null 2>&1
-  compile_error
-  rm $COIN_TGZ
-  cd phore-1.3.3
-  cd bin
   chmod +x *
   cp $COIN_DAEMON $COIN_PATH
   cp $COIN_CLI $COIN_PATH
